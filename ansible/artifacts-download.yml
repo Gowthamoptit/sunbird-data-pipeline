@@ -29,7 +29,7 @@
 
     - name: download artifact from aws s3
       include_role:
-        name: aws-cloud-storage
+        name: artifacts-download-azure
         tasks_from: download.yml
       vars:
         local_file_or_folder_path: "{{ artifact_path }}"
