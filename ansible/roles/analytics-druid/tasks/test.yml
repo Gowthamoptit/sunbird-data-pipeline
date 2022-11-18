@@ -6,10 +6,10 @@
   when: druid_role == "coordinator" 
 
 
-- name: Test that our port is allocated
-  wait_for: host={{ ansible_host }} port=8090
-            connect_timeout=10 state=started
-  when: druid_role == "overlord" 
+#- name: Test that our port is allocated
+  #wait_for: host={{ ansible_host }} port=8090
+            #connect_timeout=10 state=started
+  #when: druid_role == "overlord" 
 
 - name: Test that our port is allocated
   wait_for: host={{ ansible_host }} port=8083
