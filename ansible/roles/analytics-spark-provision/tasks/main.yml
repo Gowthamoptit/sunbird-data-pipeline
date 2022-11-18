@@ -117,10 +117,10 @@
     recurse: yes
   become: yes
 
-#- name: Install latest ruby
-  #become: yes
-  #become_user: "{{ analytics_user }}"
-  #shell: "export PATH=$PATH:/home/analytics/.rvm/bin && rvm install ruby-2.2"
+- name: Install latest ruby
+  become: yes
+  become_user: "{{ analytics_user }}"
+  shell: rvm install ruby-2.2.10
 
 - name: Add ruby repository
   become: yes
