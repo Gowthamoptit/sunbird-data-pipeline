@@ -117,10 +117,10 @@
     recurse: yes
   become: yes
 
-- name: Install latest ruby
-  become: yes
-  become_user: "{{ analytics_user }}"
-  shell: export PATH=$PATH:/home/analytics/.rvm/bin && rvm install ruby-2.2.10
+#- name: Install latest ruby
+  #become: yes
+  #become_user: "{{ analytics_user }}"
+  #shell: export PATH=$PATH:/home/analytics/.rvm/bin && rvm install ruby-2.2.10
 
 - name: Add ruby repository
   become: yes
@@ -135,10 +135,10 @@
     #update_cache: true
     #cache_valid_time: 3600
 
-- name: Install ruby-kafka
-  become: yes
-  become_user: "{{ analytics_user }}"
-  shell: "bash -ilc 'export PATH=$PATH:/home/analytics/.rvm/bin && rvm --default use ruby-2.2 && gem install ruby-kafka'"
+#- name: Install ruby-kafka
+  #become: yes
+  #become_user: "{{ analytics_user }}"
+  #shell: "bash -ilc 'export PATH=$PATH:/home/analytics/.rvm/bin && rvm --default use ruby-2.2 && gem install ruby-kafka'"
 
 - name: Download Kafka-2.11
   become: yes
