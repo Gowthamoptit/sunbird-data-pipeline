@@ -30,7 +30,7 @@
 
     - name: upload artifact to aws s3
       include_role:
-        name: aws-cloud-storage
+        name: artifacts-upload-azure
         tasks_from: upload.yml
       vars:
         local_file_or_folder_path: "{{ artifact_path }}"
